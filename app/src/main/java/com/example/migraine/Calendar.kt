@@ -15,7 +15,7 @@ class Calendar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
         onload()
-        afficher("A")
+        afficher("2019")
     }
 
     fun onload() {
@@ -48,7 +48,7 @@ class Calendar : AppCompatActivity() {
         val EditText = findViewById(R.id.MULTI) as EditText
         val sharedPref = getSharedPreferences("KIKI", Context.MODE_PRIVATE) ?: return
         sharedPref.edit()
-        val init = sharedPref.getString("push", "")
+        val init = sharedPref.getString("push", "0")
         val nombre_val = parseInt(init)
 
         for (val_increment in 0..nombre_val) {

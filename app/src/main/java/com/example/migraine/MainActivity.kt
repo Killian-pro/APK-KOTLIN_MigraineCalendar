@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         prefs = this.getSharedPreferences("KIKI", 0)
 
         val OLD = prefs!!.getLong("time", 0)
-        var init = prefs!!.getString("push", null)
+        var init = prefs!!.getString("push", "0")
         // difference en MILLISECOND
         val Diff = timeactual - OLD
         // DIFF EN HEURE
